@@ -1,0 +1,122 @@
+:root {
+  --grid-bg: #1e1e1e;
+  --grid-line: #333;
+  --drop-zone-bg: #2d2d2d;
+  --drop-zone-active: #3d3d3d;
+  --not-allowed-bg: rgba(255, 0, 0, 0.3);
+}
+
+.circuit-grid {
+  margin-top: 1.5rem;
+  background-color: #121212;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  min-height: 25rem;
+  position: relative;
+}
+
+.circuit-lines-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.qubit-line {
+  display: flex;
+  align-items: center;
+  height: 3.125rem;
+  border-bottom: 1px solid var(--grid-line);
+}
+
+.qubit-label {
+  color: white;
+  min-width: 3.75rem;
+  font-size: 0.875rem;
+  margin-right: 0.625rem;
+}
+
+.drop-zones-container {
+  display: flex;
+  flex-grow: 1;
+  gap: 0.25rem;
+}
+
+.drop-zone-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.drop-zone {
+  width: 100%;
+  height: 2.1875rem;
+  border: 1px dashed var(--grid-line);
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.drop-zone-active {
+  background-color: rgba(100, 149, 237, 0.3);
+  border-color: #6495ed;
+}
+
+.not-allowed-drop {
+  background-color: var(--not-allowed-bg);
+  border-color: red;
+  cursor: not-allowed;
+}
+
+.dropped-gate-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gate-button {
+  background-color: #444;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.control-point {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+}
+
+.target-point {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cnot-selecting .drop-zone {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.allowed-for-cnot {
+  opacity: 1;
+  background: rgba(79, 70, 229, 0.1);
+  cursor: crosshair;
+}
+
+.empty-state {
+  text-align: center;
+  color: white;
+}

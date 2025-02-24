@@ -1,0 +1,29 @@
+.resource-usage {
+    background-color: var(--grid-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .section-title {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .resource-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .resource-item {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  
+  .resource-value {
+    color: var(--text-primary);
+    font-family: monospace;
+  }

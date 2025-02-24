@@ -1,0 +1,93 @@
+.measurement-results {
+    background-color: var(--grid-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .measurement-title {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .measurement-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color, #eaeaea);
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+  }
+  
+  .stat-value {
+    color: var(--text-primary);
+    font-family: monospace;
+    font-size: 0.875rem;
+  }
+  
+  .outcomes-title {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .outcome-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .outcome-row {
+    display: flex;
+    align-items: center;
+    height: 1.75rem;
+  }
+  
+  .outcome-bitstring {
+    width: 90px;
+    font-family: monospace;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+  }
+  
+  .outcome-count {
+    width: 80px;
+    text-align: right;
+    margin-right: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+  }
+  
+  .outcome-bar-container {
+    flex: 1;
+    height: 1rem;
+    background-color: var(--bar-bg, #f0f0f0);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .outcome-bar {
+    height: 100%;
+    background-color: var(--primary-accent, #3b82f6);
+    transition: width 0.3s ease;
+  }
+  
+  .outcome-percentage {
+    width: 60px;
+    text-align: right;
+    margin-left: 0.75rem;
+    color: var(--primary-accent, #3b82f6);
+    font-weight: 500;
+    font-size: 0.875rem;
+  }

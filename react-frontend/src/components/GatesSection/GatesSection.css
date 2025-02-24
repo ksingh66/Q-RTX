@@ -1,0 +1,49 @@
+.gates-section {
+    background-color: var(--grid-bg);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .section-title {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .gates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .gate-button {
+    background-color: var(--drop-zone-bg);
+    border: 1px solid var(--drop-zone-active);
+    border-radius: 0.375rem;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    cursor: move;
+  }
+  
+  .gate-button:hover {
+    background-color: var(--drop-zone-active);
+  }
+  
+  .gate-icon {
+    color: var(--text-secondary);
+  }
+  
+  .opacity-50 {
+    opacity: 0.5;
+  }
+  .gates-section {
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    background: var(--grid-bg);
+  }
+  
