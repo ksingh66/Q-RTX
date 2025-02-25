@@ -1,6 +1,6 @@
 # Quantum Circuit Simulator
 
-A visual quantum circuit builder and GPU-accelerated simulator that leverages NVIDIA's cuQuantum and Qiskit to provide fast and accurate quantum circuit simulations.
+A visual quantum circuit builder and GPU-accelerated simulator that leverages NVIDIA's cuQuantum and Qiskit to provide fast and accurate quantum circuit simulations. Made for the NVIDIA 2025 GTC Golden ticket challenge.
 
 ## Overview
 
@@ -106,7 +106,7 @@ The frontend is a React application that runs directly on your local machine.
 
 ### Running Simulations
 
-1. Click the "Run Simulation" button to execute the quantum circuit on your GPU.
+1. Click the "Run" button to execute the quantum circuit on your GPU.
 
 2. The simulation results will display the measurement outcomes as a histogram, showing the probability distribution of possible states.
 
@@ -114,7 +114,7 @@ The frontend is a React application that runs directly on your local machine.
 
 ### Analyzing Circuit Properties
 
-The "Resource Usage" panel in the future will provice a real-time analysis of your circuit:
+The "Resource Usage" panel in the future will provide a real-time analysis of your circuit:
 
 - **Gate Count**: Total number of quantum gates in your circuit
 - **Circuit Depth**: The longest path through your quantum circuit
