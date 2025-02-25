@@ -50,7 +50,7 @@ The backend requires Docker with NVIDIA GPU support to enable the quantum simula
 
    ```bash
    git clone https://github.com/https://github.com/ksingh66/Q-RTX
-   cd quantum-circuit-simulator
+   cd Q-RTX
    ```
 
 3. Build the Docker container for the backend (first time only):
