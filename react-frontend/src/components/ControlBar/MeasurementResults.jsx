@@ -25,6 +25,20 @@ const MeasurementResults = ({ simulationResults }) => {
     
     return bitstring;
   };
+  
+  // Adjust display for long bitstrings
+  const getBitstringWidth = (str) => {
+    const length = str.length;
+    
+    // Dynamically adjust width based on bitstring length
+    if (length > 12) {
+      return { minWidth: '130px', width: 'auto' };
+    } else if (length > 8) {
+      return { minWidth: '110px', width: 'auto' };
+    }
+    
+    return {}; // Use default CSS width for shorter strings
+  };
 
   return (
     <div className="measurement-results">
@@ -48,21 +62,31 @@ const MeasurementResults = ({ simulationResults }) => {
       <h4 className="outcomes-title">Top Measurement Outcomes</h4>
       
       <div className="outcome-list">
-        {sortedResults.map((result, index) => (
-          <div key={index} className="outcome-row">
-            <div className="outcome-bitstring">|{formatBitstring(result.bitstring)}⟩</div>
-            <div className="outcome-count">{result.count} shots</div>
-            <div className="outcome-bar-container">
+        {sortedResults.map((result, index) => {
+          const formattedString = formatBitstring(result.bitstring);
+          
+          return (
+            <div key={index} className="outcome-row">
               <div 
-                className="outcome-bar" 
-                style={{ width: `${result.probability * 100}%` }}
-              ></div>
+                className="outcome-bitstring" 
+                style={getBitstringWidth(formattedString)}
+                title={`|${formattedString}⟩`} // Add tooltip for very long strings
+              >
+                |{formattedString}⟩
+              </div>
+              <div className="outcome-count">{result.count} shots</div>
+              <div className="outcome-bar-container">
+                <div 
+                  className="outcome-bar" 
+                  style={{ width: `${result.probability * 100}%` }}
+                ></div>
+              </div>
+              <div className="outcome-percentage">
+                {(result.probability * 100).toFixed(1)}%
+              </div>
             </div>
-            <div className="outcome-percentage">
-              {(result.probability * 100).toFixed(1)}%
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
