@@ -6,7 +6,7 @@ A visual quantum circuit builder and GPU-accelerated simulator that leverages NV
 
 This application provides an intuitive drag-and-drop interface for building quantum circuits and simulating them using your local NVIDIA GPU. With support for up to 25 qubits, this simulator bridges the gap between theoretical quantum computing concepts and practical implementation.
 
-![Quantum Circuit Simulator Interface](placeholder-for-screenshot.png)
+![Quantum Circuit Simulator Interface](./images/Bell_State.png)
 
 ## Key Features
 
@@ -114,7 +114,7 @@ The frontend is a React application that runs directly on your local machine.
 
 ### Analyzing Circuit Properties
 
-The "Resource Usage" panel provides real-time analysis of your circuit:
+The "Resource Usage" panel in the future will provice a real-time analysis of your circuit:
 
 - **Gate Count**: Total number of quantum gates in your circuit
 - **Circuit Depth**: The longest path through your quantum circuit
@@ -130,8 +130,10 @@ The "Resource Usage" panel provides real-time analysis of your circuit:
 - **X (NOT gate)**: Flips a qubit from 0 to 1 or 1 to 0
 - **Y**: Applies a Y-axis rotation on the Bloch sphere
 - **Z**: Applies a phase flip
-- **CNOT**: Conditional NOT gate that flips the target qubit if the control qubit is 1
+- **CNOT**: Conditional NOT gate that flips the target qubit if the control qubit is 1. In the simulation the + is the target and the \*(dot) is the control qubit.
 - **SWAP**: Exchanges the state of two qubits
+
+##### For a basic Bell State view the screenshot above
 
 ### Advanced Gates (Coming Soon)
 
@@ -177,7 +179,7 @@ If you're having issues with GPU access in Docker, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
